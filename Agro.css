@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f2;
+    color: #263526;
+}
+
+
+header {
+    background-color: #245c35;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 30px;
+}
+
+.logo p {
+    font-size: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b9d99b;
+}
+
+/* Início */
+.inicio {
+    min-height: 500px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        rgba(20, 60, 30, 0.75),
+        rgba(20, 60, 30, 0.75)
+    );
+}
+
+.inicio div {
+    max-width: 650px;
+    color: white;
+}
+
+.inicio h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #8fbd62;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #729d49;
+}
+
+.genetica {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.genetica h2,
+.cadastro h2,
+.contatos h2 {
+    font-size: 32px;
+    color: #245c35;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #245c35;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.cadastro {
+    background-color: #e6eee1;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.cadastro p {
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 13px;
+    background-color: #245c35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #174225;
+}
+
+.contatos {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+.contatos p {
+    margin: 10px;
+}
+
+footer {
+    background-color: #183d24;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .inicio h2 {
+        font-size: 32px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+}

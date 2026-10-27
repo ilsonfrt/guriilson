@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodução Assistida - GenBov</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f6f0;
+            color: #263526;
+        }
+
+        header {
+            background-color: #1e4d2b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .logo h1 {
+            font-size: 30px;
+            color: #f4c430;
+        }
+
+        .logo p {
+            font-size: 14px;
+            color: #e2e8e0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f4c430;
+        }
+
+        /* SEÇÃO DE INÍCIO COM IMAGEM DE FUNDO */
+        .inicio {
+            min-height: 500px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                rgba(20, 50, 28, 0.75),
+                rgba(20, 50, 28, 0.75)
+            ), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600') no-repeat center center/cover;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .inicio div {
+            max-width: 650px;
+            color: white;
+        }
+
+        .inicio h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: #f4c430;
+        }
+
+        .inicio p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #f0f4ee;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #1e4d2b;
+            padding: 13px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #b89228;
+            color: #ffffff;
+        }
+
+        /* SEÇÕES GERAIS */
+        .genetica {
+            padding: 70px 8%;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .contatos {
+            padding: 70px 8%;
+            text-align: center;
+            background-color: #eeebe1;
+        }
+
+        .genetica h2,
+        .contatos h2 {
+            font-size: 32px;
+            color: #1e4d2b;
+            margin-bottom: 15px;
+        }
+
+        .descricao {
+            margin-bottom: 40px;
+            color: #4a5349;
+            line-height: 1.6;
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #d4af37;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+        }
+
+        .card h3 {
+            color: #1e4d2b;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* CONTATOS E FOOTER */
+        .contatos p {
+            margin: 10px;
+            color: #333;
+        }
+
+        .contatos strong {
+            color: #1e4d2b;
+        }
+
+        footer {
+            background-color: #12301b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 3px solid #d4af37;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .inicio h2 {
+                font-size: 32px;
+            }
+
+            .inicio p {
+                font-size: 16px;
+            }
+
+            .genetica,
+            .contatos {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GenBov</h1>
+            <p>Reprodução Bovina</p>
+        </div>
+        <nav>
+            <a href="index.html">Voltar ao Início</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="genetica" style="text-align: left; max-width: 900px; margin: 40px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #d4af37;">
+            <h2 style="color: #1e4d2b; font-size: 36px; margin-bottom: 20px; text-align: center;">Técnicas de Reprodução Assistida</h2>
+            <p class="descricao" style="font-size: 18px; text-align: center;">
+                As tecnologias reprodutivas são fundamentais para acelerar o progresso genético e multiplicar os melhores indivíduos do rebanho com eficiência e escala.
+            </p>
+
+            <div class="cards" style="margin-top: 30px;">
+                <div class="card">
+                    <h3>IATF</h3>
+                    <p>Inseminação Artificial em Tempo Fixo. Permite sincronizar o cio de lotes de matrizes, otimizando a mão de obra e padronizando os bezerros.</p>
+                </div>
+
+                <div class="card">
+                    <h3>FIV</h3>
+                    <p>Fertilização In Vitro. Permite a produção em laboratório de dezenas de embriões ao ano a partir de doadoras de alto valor genético.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Sêmen Sexado</h3>
+                    <p>Possibilita escolher o sexo da prole (machos ou fêmeas) com precisão, direcionando o foco para produção de carne ou reposição.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="Agro.html" class="botao">← Voltar para a Página Principal</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GenBov - Genética Bovina</p>
+    </footer>
+</body>
+</html>

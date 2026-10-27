@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenBov - Cruzamentos Genéticos</title>
+    <link rel="stylesheet" href="Agro.css">
+    <link rel="stylesheet" href="Cruzamentos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GenBov</h1>
+            <p>Genética Bovina</p>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#cruzamentos">Cruzamentos</a>
+            <a href="#punnett">Punnett</a>
+            <a href="#vantagens">Vantagens</a>
+            <a href="agrocad.html">Cadastro</a>
+        </nav>
+    </header>
+    <main>
+        <section class="inicio">
+            <div>
+                <h2>Cruzamentos Genéticos</h2>
+                <p>Entenda como os cruzamentos genéticos podem ser utilizados no melhoramento de bovinos, combinando características desejáveis de diferentes animais.</p>
+                <a href="#cruzamentos" class="botao">Aprenda sobre cruzamentos</a>
+            </div>
+        </section>
+        <section id="cruzamentos" class="cruzamentos">
+            <h2>O que são cruzamentos genéticos?</h2>
+            <p class="descricao">O cruzamento genético consiste na reprodução entre animais escolhidos de acordo com suas características genéticas. O objetivo é combinar características desejáveis nos descendentes.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="icone">🧬</div>
+                    <h3>Genótipo</h3>
+                    <p>É o conjunto de genes que um animal possui. O genótipo influencia as características que podem ser transmitidas para os descendentes.</p>
+                </div>
+                <div class="card">
+                    <div class="icone">🐂</div>
+                    <h3>Seleção dos animais</h3>
+                    <p>Os animais utilizados no cruzamento podem ser escolhidos considerando características como crescimento, reprodução, resistência e produção.</p>
+                </div>
+                <div class="card">
+                    <div class="icone">🌱</div>
+                    <h3>Descendentes</h3>
+                    <p>Os filhos recebem material genético dos dois progenitores. A combinação dos alelos influencia suas características.</p>
+                </div>
+            </div>
+        </section>
+        <section class="conceitos">
+            <h2>Conceitos básicos da genética</h2>
+            <div class="cards">
+                <div class="card destaque">
+                    <h3>Alelo dominante</h3>
+                    <p>Um alelo dominante pode determinar uma característica mesmo quando está presente em apenas uma das cópias do gene. É representado normalmente por uma letra maiúscula, como <strong>A</strong>.</p>
+                </div>
+                <div class="card destaque">
+                    <h3>Alelo recessivo</h3>
+                    <p>Um alelo recessivo geralmente se manifesta quando está presente em duas cópias. É representado por uma letra minúscula, como <strong>a</strong>.</p>
+                </div>
+                <div class="card destaque">
+                    <h3>Heterozigoto</h3>
+                    <p>Um indivíduo heterozigoto possui dois alelos diferentes para determinado gene, como <strong>Aa</strong>.</p>
+                </div>
+                <div class="card destaque">
+                    <h3>Homozigoto</h3>
+                    <p>Um indivíduo homozigoto possui dois alelos iguais, podendo ser <strong>AA</strong> ou <strong>aa</strong>.</p>
+                </div>
+            </div>
+        </section>
+        <section id="punnett" class="punnett">
+            <h2>Quadro de Punnett</h2>
+            <p class="descricao">O quadro de Punnett é uma ferramenta utilizada para representar as possíveis combinações de alelos que podem aparecer nos descendentes.</p>
+            <div class="cruzamento-box">
+                <h3>Exemplo: Aa × Aa</h3>
+                <p>Considere dois animais heterozigotos para uma determinada característica:</p>
+                <div class="pais">
+                    <span>Progenitor 1: <strong>Aa</strong></span>
+                    <span>×</span>
+                    <span>Progenitor 2: <strong>Aa</strong></span>
+                </div>
+                <table class="tabela-punnett">
+                    <tr>
+                        <th></th>
+                        <th>A</th>
+                        <th>a</th>
+                    </tr>
+                    <tr>
+                        <th>A</th>
+                        <td class="dominante">AA</td>
+                        <td class="heterozigoto">Aa</td>
+                    </tr>
+                    <tr>
+                        <th>a</th>
+                        <td class="heterozigoto">Aa</td>
+                        <td class="recessivo">aa</td>
+                    </tr>
+                </table>
+                <div class="resultado">
+                    <h3>Resultado esperado</h3>
+                    <p><strong>25%</strong> AA — homozigoto dominante</p>
+                    <p><strong>50%</strong> Aa — heterozigoto</p>
+                    <p><strong>25%</strong> aa — homozigoto recessivo</p>
+                </div>
+            </div>
+        </section>
+        <section class="tipos">
+            <h2>Tipos de cruzamentos</h2>
+            <p class="descricao">Diferentes estratégias de cruzamento podem ser utilizadas dependendo dos objetivos do programa de melhoramento genético.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Cruzamento entre raças</h3>
+                    <p>Utiliza animais de raças diferentes, buscando combinar características desejáveis de cada grupo genético.</p>
+                </div>
+                <div class="card">
+                    <h3>Cruzamento entre linhagens</h3>
+                    <p>Pode ser utilizado para combinar características presentes em diferentes linhagens selecionadas.</p>
+                </div>
+                <div class="card">
+                    <h3>Cruzamento dirigido</h3>
+                    <p>Os progenitores são escolhidos de maneira planejada, de acordo com os objetivos do produtor ou do programa de melhoramento.</p>
+                </div>
+            </div>
+        </section>
+        <section id="vantagens" class="vantagens">
+            <h2>Por que utilizar cruzamentos?</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>✓ Diversidade genética</h3>
+                    <p>A combinação de diferentes materiais genéticos pode aumentar a diversidade dentro do rebanho.</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Características desejáveis</h3>
+                    <p>O planejamento pode buscar combinar características relacionadas à produção, adaptação e eficiência.</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Planejamento</h3>
+                    <p>O conhecimento genético permite tomar decisões mais conscientes na escolha dos progenitores.</p>
+                </div>
+            </div>
+        </section>
+        <section class="observacao">
+            <h2>Importante</h2>
+            <p>Os resultados de um cruzamento não são garantidos apenas pela aparência dos animais. Muitas características de interesse na produção bovina são influenciadas por vários genes e também pelo ambiente, pela alimentação, pelo manejo e pelas condições de criação.</p>
+            <p>Por isso, o planejamento genético deve considerar informações de desempenho, genealogia e objetivos do rebanho.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 GenBov - Genética Bovina</p>
+    </footer>
+</body>
+</html>
+```
+
+    <p>&copy; 2026 GenBov - Genética Bovina</p>
+</footer>
+
+</body> </html>

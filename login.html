@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - GenBov</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f6f0;
+            color: #263526;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e4d2b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .logo h1 {
+            font-size: 30px;
+            color: #f4c430;
+        }
+
+        .logo p {
+            font-size: 14px;
+            color: #e2e8e0;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .auth-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #d4af37;
+        }
+
+        .abas {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eeebe1;
+            padding-bottom: 10px;
+        }
+
+        .aba-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4a5349;
+            cursor: pointer;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .aba-btn.ativo {
+            color: #1e4d2b;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #1e4d2b;
+            font-size: 14px;
+        }
+
+        form input {
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #c4bca6;
+            border-radius: 5px;
+            background-color: #ffffff;
+            font-size: 14px;
+        }
+
+        .botao-form {
+            padding: 13px;
+            background-color: #1e4d2b;
+            color: #f4c430;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .botao-form:hover {
+            background-color: #14361e;
+        }
+
+        .mensagem-erro {
+            color: #b30000;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #12301b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 3px solid #d4af37;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>GenBov</h1>
+            <p>Acesso Restrito</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="abas">
+                <button class="aba-btn ativo" onclick="mostrarForm('login')">Entrar</button>
+                <button class="aba-btn" onclick="mostrarForm('cadastro')">Cadastrar</button>
+            </div>
+
+            <p id="mensagem-erro" class="mensagem-erro"></p>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+            <form id="form-login" onsubmit="realizarLogin(event)">
+                <label for="email-login">E-mail:</label>
+                <input type="email" id="email-login" required placeholder="Seu e-mail cadastrado">
+
+                <label for="senha-login">Senha:</label>
+                <input type="password" id="senha-login" required placeholder="Sua senha">
+
+                <button type="submit" class="botao-form">Acessar Conta</button>
+            </form>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <form id="form-cadastro" onsubmit="realizarCadastro(event)" style="display: none;">
+                <label for="nome-cadastro">Nome Completo:</label>
+                <input type="text" id="nome-cadastro" required placeholder="Digite seu nome completo">
+
+                <label for="email-cadastro">E-mail:</label>
+                <input type="email" id="email-cadastro" required placeholder="Digite seu e-mail">
+
+                <label for="telefone-cadastro">Telefone / WhatsApp:</label>
+                <input type="tel" id="telefone-cadastro" required placeholder="(00) 00000-0000">
+
+                <label for="senha-cadastro">Criar Senha:</label>
+                <input type="password" id="senha-cadastro" required placeholder="Crie uma senha segura">
+
+                <button type="submit" class="botao-form">Criar Minha Conta</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GenBov - Genética Bovina</p>
+    </footer>
+
+    <script>
+        function mostrarForm(tipo) {
+            const formLogin = document.getElementById('form-login');
+            const formCadastro = document.getElementById('form-cadastro');
+            const botoes = document.querySelectorAll('.aba-btn');
+            const msgErro = document.getElementById('mensagem-erro');
+            msgErro.style.display = 'none';
+
+            if (tipo === 'login') {
+                formLogin.style.display = 'flex';
+                formCadastro.style.display = 'none';
+                botoes[0].classList.add('ativo');
+                botoes[1].classList.remove('ativo');
+            } else {
+                formLogin.style.display = 'none';
+                formCadastro.style.display = 'flex';
+                botoes[0].classList.remove('ativo');
+                botoes[1].classList.add('ativo');
+            }
+        }
+
+        // CADASTRO
+        function realizarCadastro(event) {
+            event.preventDefault();
+            const email = document.getElementById('email-cadastro').value;
+            const senha = document.getElementById('senha-cadastro').value;
+
+            // Salva as credenciais do usuário
+            localStorage.setItem('usuario_cadastrado_email', email);
+            localStorage.setItem('usuario_cadastrado_senha', senha);
+
+            alert('Cadastro realizado com sucesso! Agora faça o login para acessar o site.');
+            mostrarForm('login');
+        }
+
+        // LOGIN
+        function realizarLogin(event) {
+            event.preventDefault();
+            const emailDigitado = document.getElementById('email-login').value;
+            const senhaDigitada = document.getElementById('senha-login').value;
+
+            const emailSalvo = localStorage.getItem('usuario_cadastrado_email');
+            const senhaSalva = localStorage.getItem('usuario_cadastrado_senha');
+
+            const msgErro = document.getElementById('mensagem-erro');
+
+            if (!emailSalvo) {
+                msgErro.textContent = 'Nenhuma conta cadastrada! Faça seu cadastro primeiro.';
+                msgErro.style.display = 'block';
+            } else if (emailDigitado === emailSalvo && senhaDigitada === senhaSalva) {
+                // Define a permissão de acesso ao site Agro.html
+                localStorage.setItem('usuario_logado', 'true');
+                window.location.href = 'Agro.html';
+            } else {
+                msgErro.textContent = 'E-mail ou senha incorretos!';
+                msgErro.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
